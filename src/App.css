@@ -1,38 +1,159 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f8ff;
+  /* Light background for contrast */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .App {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #e9d5ff;
+  /* Soft lavender background */
+  border-radius: 12px;
+  /* Soft edges */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  /* Animation on hover */
+}
+
+.App:hover {
+  transform: scale(1.02);
+  /* Slightly enlarge on hover */
+}
+
+h1 {
   text-align: center;
+  color: #6f2c91;
+  /* Richer dark lavender for text */
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.input-section input {
+  flex-grow: 1;
+  padding: 12px;
+  border: 1px solid #d6cbe1;
+  /* Soft light lavender border */
+  border-radius: 8px;
+  /* Soft edges */
+  margin-right: 10px;
+  transition: border-color 0.3s ease;
+  /* Animation on focus */
+}
+
+.input-section input:focus {
+  border-color: #6f2c91;
+  /* Change border color on focus to a richer purple */
+  outline: none;
+  /* Remove default outline */
+}
+
+.input-section button {
+  padding: 12px 15px;
+  background-color: #9b59b6;
+  /* Soft purple button color */
   color: white;
+  border: none;
+  border-radius: 8px;
+  /* Soft edges */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  /* Animation on hover */
 }
 
-.App-link {
-  color: #61dafb;
+.input-section button:hover {
+  background-color: #8e44ad;
+  /* Darker purple on hover */
+  transform: translateY(-2px);
+  /* Lift effect on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-list {
+  margin-top: 20px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  /* Align items vertically centered */
+  justify-content: space-between;
+  /* Distribute space evenly between buttons and text */
+  margin: 10px 0;
+  /* Add some margin between todo items */
+  padding: 12px;
+  background-color: #ffffff;
+  /* White background for todo items */
+  border: 1px solid #d6cbe1;
+  /* Soft light lavender border */
+  border-radius: 8px;
+  /* Soft edges */
+  transition: box-shadow 0.3s ease;
+  /* Animation on hover */
+}
+
+.todo-item:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Shadow effect on hover */
+}
+
+.todo-item span {
+  flex-grow: 1;
+  /* Allow the text to take up available space */
+  margin-right: 10px;
+  /* Add a margin between text and buttons */
+  color: #6f2c91;
+  /* Richer dark lavender for text */
+}
+
+.todo-item button {
+  margin-left: 5px;
+  /* Add some space between buttons */
+  padding: 5px 10px;
+  /* Add padding for a better button size */
+  cursor: pointer;
+  /* Change cursor to pointer on hover */
+  background-color: #9b59b6;
+  /* Soft purple for buttons */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  /* Soft edges */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  /* Animation on hover */
+}
+
+.todo-item button:hover {
+  background-color: #8e44ad;
+  /* Darker purple on hover */
+  transform: translateY(-2px);
+  /* Lift effect on hover */
+}
+
+.clear-btn {
+  padding: 10px 15px;
+  background-color: #d7bde2;
+  /* Light lavender for clear button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  /* Soft edges */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  /* Animation on hover */
+}
+
+.clear-btn:hover {
+  background-color: #c39bd3;
+  /* Darker lavender on hover */
+  transform: translateY(-2px);
+  /* Lift effect on hover */
 }
